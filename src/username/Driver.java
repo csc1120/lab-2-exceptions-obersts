@@ -100,12 +100,10 @@ public class Driver {
         }
         return max;
     }
-    @SuppressWarnings("checkstyle:MagicNumber")
     private static void report(int numDice, int[] rolls, int max){
         int scale;
-        int scaleMin = 10;
-        if(max>=scaleMin){
-            scale = max/10;
+        if(max>=MAX_DICE){
+            scale = max/MAX_DICE;
         } else{
             scale = 1;
         }
